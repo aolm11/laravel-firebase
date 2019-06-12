@@ -75,6 +75,11 @@ class FirebaseMessage
     private $packageName;
 
     /**
+     * @var mixed
+     */
+    private $type; // Esto es para indicar el tipo de notificación, por si hay más de una en el proyecto.
+
+    /**
      * Recipient.
      *
      * @return $this
@@ -136,6 +141,27 @@ class FirebaseMessage
     public function getPackageName()
     {
         return $this->packageName;
+    }
+
+    /**
+     * Set restricted type 
+     *
+     * @param int $time
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 
     /**
