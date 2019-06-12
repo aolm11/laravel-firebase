@@ -1,5 +1,5 @@
 {
-    "name": "liliom/laravel-firebase",
+    "name": "aolm11/laravel-firebase",
     "description": "Laravel FCM (Firebase Cloud Messaging) Notification Channel",
     "keywords": [
         "laravel",
