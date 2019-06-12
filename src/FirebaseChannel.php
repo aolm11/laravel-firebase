@@ -40,7 +40,7 @@ class FirebaseChannel
         $message = $notification->toFirebase($notifiable);
 
         if ($message->recipientNotGiven()) {
-            if (!$to = $notifiable->routeNotificationFor('firebase')) {
+            if (!$to = $notifiable->routeNotificationFor('firebase', $message->getType())) {
                 throw CouldNotSendNotification::missingRecipient();
             }
 
